@@ -446,9 +446,9 @@ impl PackageDb {
             }
 
             // Try to load the data by sparsely reading the artifact (if supported)
-            if let Some(metadata) = self.get_lazy_metadata_wheel(ai).await? {
-                return Ok(Some((artifact_info, metadata)));
-            }
+            // if let Some(metadata) = self.get_lazy_metadata_wheel(ai).await? {
+            //     return Ok(Some((artifact_info, metadata)));
+            // }
 
             let metadata = if ai.is_direct_url {
                 if let Some(wheel_builder) = wheel_builder {
